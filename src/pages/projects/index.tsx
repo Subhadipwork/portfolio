@@ -43,7 +43,8 @@ export default function Projects() {
           </h1>
           <div className="my-2">
             <span className="text-sm text-muted-foreground">
-              A showcase of web development projects featuring modern technologies and enterprise solutions
+              A showcase of web development projects featuring modern
+              technologies and enterprise solutions
             </span>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
@@ -53,18 +54,20 @@ export default function Projects() {
           </div>
           <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
             <span className="text-xl font-bold md:text-2xl">
-              Experienced in full-stack web development with expertise in PHP, Laravel, JavaScript, and modern web technologies.
+              Experienced in full-stack web development with expertise in PHP,
+              Laravel, JavaScript, and modern web technologies.
             </span>
             <p className="mt-10 text-base md:text-xl">
-              Specialized in building scalable web applications, e-commerce platforms, and enterprise solutions. Visit my{" "}
+              Specialized in building scalable web applications, e-commerce
+              platforms, and enterprise solutions. Visit my{" "}
               <a
                 href={`${siteMetadata.github}?tab=repositories`}
                 target="_blank"
                 className="font-semibold text-accent underline underline-offset-2 hover:text-accent/70"
               >
                 Github
-              </a>
-              {" "}for more projects and contributions.
+              </a>{" "}
+              for more projects and contributions.
             </p>
           </div>
         </div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,10 +11,11 @@
     --border: 240 5.9% 90%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --accent: 183 65% 35%;
+    --accent: 263 70% 50%;
     --accent-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
+    --font-family: "Montserrat", sans-serif;
   }
 
   .dark {
@@ -21,7 +24,7 @@
     --border: 240 3.7% 15.9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --accent: 183 63% 40%;
+    --accent: 263 70% 50%;
     --accent-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
@@ -32,5 +35,6 @@
   }
   body {
     @apply min-h-screen bg-background text-foreground;
+    font-family: var(--font-family);
   }
 }

@@ -8,7 +8,7 @@ import { PROJECTS_CARD } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 interface ProjectDetailProps {
-  project: typeof PROJECTS_CARD[0];
+  project: (typeof PROJECTS_CARD)[0];
   slug: string;
 }
 
@@ -33,29 +33,29 @@ export default function ProjectDetail({ project, slug }: ProjectDetailProps) {
           type: "website",
         }}
       />
-      
+
       <section className="mx-auto mb-40 mt-6 w-full px-6 sm:mt-12 sm:px-14 md:px-20">
         <div className="mx-auto max-w-4xl">
-          <Link 
-            href="/projects" 
-            className="inline-flex items-center gap-2 text-accent hover:text-accent/70 mb-8"
+          <Link
+            href="/projects"
+            className="mb-8 inline-flex items-center gap-2 text-accent hover:text-accent/70"
           >
             <ArrowLeft size={20} />
             Back to Projects
           </Link>
-          
+
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-foreground md:text-5xl mb-4">
+            <h1 className="mb-4 text-3xl font-bold text-foreground md:text-5xl">
               {project.name}
             </h1>
-            
-            <div className="flex gap-4 mb-6">
+
+            <div className="mb-6 flex gap-4">
               {project.sourceCodeHref !== "#" && (
                 <a
                   href={project.sourceCodeHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-background rounded-lg hover:bg-accent/90 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-background transition-colors hover:bg-accent/90"
                 >
                   <Github size={20} />
                   Source Code
@@ -66,7 +66,7 @@ export default function ProjectDetail({ project, slug }: ProjectDetailProps) {
                   href={project.liveWebsiteHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 border border-accent text-accent rounded-lg hover:bg-accent hover:text-background transition-colors"
+                  className="inline-flex items-center gap-2 rounded-lg border border-accent px-4 py-2 text-accent transition-colors hover:bg-accent hover:text-background"
                 >
                   <ExternalLink size={20} />
                   Live Demo
@@ -78,7 +78,10 @@ export default function ProjectDetail({ project, slug }: ProjectDetailProps) {
           <div className="grid gap-8 md:gap-12">
             <div className="grid gap-4">
               {project.imageUrl.map((image, index) => (
-                <div key={index} className="relative aspect-video rounded-lg overflow-hidden bg-muted">
+                <div
+                  key={index}
+                  className="relative aspect-video overflow-hidden rounded-lg bg-muted"
+                >
                   <Image
                     src={image}
                     alt={`${project.name} screenshot ${index + 1}`}
@@ -93,29 +96,38 @@ export default function ProjectDetail({ project, slug }: ProjectDetailProps) {
 
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-semibold text-foreground mb-4">About This Project</h2>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <h2 className="mb-4 text-2xl font-semibold text-foreground">
+                  About This Project
+                </h2>
+                <p className="text-lg leading-relaxed text-muted-foreground">
                   {project.detailedDescription}
                 </p>
               </div>
-              
+
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Technologies Used</h3>
+                <h3 className="mb-3 text-xl font-semibold text-foreground">
+                  Technologies Used
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                    <span
+                      key={index}
+                      className="rounded-full bg-accent/10 px-3 py-1 text-sm font-medium text-accent"
+                    >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              
+
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Key Features</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <h3 className="mb-3 text-xl font-semibold text-foreground">
+                  Key Features
+                </h3>
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                   {project.features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <div className="h-2 w-2 rounded-full bg-accent"></div>
                       <span className="text-muted-foreground">{feature}</span>
                     </div>
                   ))}
@@ -131,8 +143,11 @@ export default function ProjectDetail({ project, slug }: ProjectDetailProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = PROJECTS_CARD.map((project) => ({
-    params: { 
-      slug: project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') 
+    params: {
+      slug: project.name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, ""),
     },
   }));
 
@@ -145,7 +160,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
   const project = PROJECTS_CARD.find(
-    (p) => p.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === slug
+    (p) =>
+      p.name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "") === slug,
   );
 
   if (!project) {

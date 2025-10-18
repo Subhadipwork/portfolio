@@ -1,36 +1,12 @@
-import {
-  SiExpress,
-  SiSocketdotio,
-  SiPrisma,
-  SiNextdotjs,
-  SiFlask,
-} from "react-icons/si";
-import {
-  FramerMotionIcon,
-  ReactRouterDomIcon,
-  VitePwaIcon,
-} from "@/components/icons";
+import { SiExpress, SiFlask } from "react-icons/si";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
 // Languages
-import HtmlSvg from "@/public/icons/html.svg";
-import CsssSvg from "@/public/icons/css.svg";
-import SassSvg from "@/public/icons/sass.svg";
 import JavascriptSvg from "@/public/icons/javascript.svg";
-import TypescriptSvg from "@/public/icons/typescript.svg";
 import PythonSvg from "@/public/icons/python.svg";
-
 
 // Libraries
 import ReactjsSvg from "@/public/icons/reactjs.svg";
-import SolidjsSvg from "@/public/icons/solidjs.svg";
-import ReduxSvg from "@/public/icons/redux.svg";
-import TailwindcssSvg from "@/public/icons/tailwindcss.svg";
-import MuiSvg from "@/public/icons/mui.svg";
-import ViteSvg from "@/public/icons/vite.svg";
-
-// Backend
-import NodejsSvg from "@/public/icons/nodejs.svg";
 
 // Database and ORMS
 import MongoDBSvg from "@/public/icons/mongodb.svg";
@@ -135,5 +111,4 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       },
     ],
   },
-
 ];
