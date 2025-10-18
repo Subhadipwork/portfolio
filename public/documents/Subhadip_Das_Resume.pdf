@@ -1,0 +1,118 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 1200
+>>
+stream
+BT
+/F1 16 Tf
+50 750 Td
+(SUBHADIP DAS) Tj
+0 -30 Td
+/F1 12 Tf
+(Web Developer) Tj
+0 -40 Td
+(Email: subhadipwork22@gmail.com) Tj
+0 -20 Td
+(Phone: +919593616791) Tj
+0 -20 Td
+(Address: Ma Shitola Appartment, Noapara, Barasat 700125) Tj
+0 -40 Td
+/F1 14 Tf
+(EXPERIENCE) Tj
+0 -25 Td
+/F1 12 Tf
+(Max Mobility Pvt. Ltd. - Web Developer (May 2024 - Present)) Tj
+0 -15 Td
+(Webhibe Technology Pvt. Ltd. - Web Developer (Feb 2023 - May 2024)) Tj
+0 -30 Td
+/F1 14 Tf
+(TECHNICAL SKILLS) Tj
+0 -25 Td
+/F1 12 Tf
+(Programming Languages: PHP, JavaScript, Python) Tj
+0 -15 Td
+(Frameworks: Laravel, Express.js, Flask, React.js) Tj
+0 -15 Td
+(Database: MySQL, MongoDB, MSSQL) Tj
+0 -15 Td
+(Technologies: API Integration, Docker, RESTful API) Tj
+0 -30 Td
+/F1 14 Tf
+(EDUCATION) Tj
+0 -25 Td
+/F1 12 Tf
+(Btech Computer Science - Adamas Institute of Technology (2020)) Tj
+0 -15 Td
+(Higher Secondary - Nahata High School (2015)) Tj
+0 -30 Td
+/F1 14 Tf
+(KEY PROJECTS) Tj
+0 -25 Td
+/F1 12 Tf
+(• E-Commerce Website) Tj
+0 -15 Td
+(• Complaint Management System) Tj
+0 -15 Td
+(• Route Optimization) Tj
+0 -15 Td
+(• I&R TATA TELE SERVICES) Tj
+0 -15 Td
+(• Custom HomeLab Infrastructure) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000110 00000 n 
+0000000271 00000 n 
+0000001523 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1590
+%%EOF
