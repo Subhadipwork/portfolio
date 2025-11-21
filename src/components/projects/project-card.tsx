@@ -43,8 +43,11 @@ export default function ProjectCard(props: ProjectCardProps) {
         </div>
         <div className="mt-6 flex items-center justify-between">
           <Link
-            href={`/projects/${props.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
-            className="text-xs font-medium text-accent hover:text-accent/70 underline md:text-sm"
+            href={`/projects/${props.name
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/(^-|-$)/g, "")}`}
+            className="text-xs font-medium text-accent underline hover:text-accent/70 md:text-sm"
           >
             View Details →
           </Link>
